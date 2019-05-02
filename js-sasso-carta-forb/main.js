@@ -1,17 +1,18 @@
 //Sasso Carta e Forbice tra due giocatori CPU
 
-//Definisco una possibile lista di soluzioni
+//Definisco una possibile lista di soluzioni in un array
 var list = ["sasso", "carta", "forbici"]
 
 //Il giocatore1 sceglie dalla lista e stampo giocatore1
 var player1 = list[Math.floor(Math.random() * list.length)]
 document.getElementById('p1').innerHTML = "</br>Il giocatore1 ha scelto " + player1;
 
+
 //Il giocatore2 sceglie dalla lista e stampo giocatore1
 var player2 = list[Math.floor(Math.random() * list.length)]
 document.getElementById('p2').innerHTML = "</br>Il giocatore2 ha scelto " + player2;
 
-//dichiaro variabile vuota risultato
+//dichiaro variabile vuota per il risultato
 var risultato = "";
 
 //definisco le condizioni del gioco
@@ -24,7 +25,7 @@ switch (true) {
     risultato = "Il giocatore1 ha vinto!";
     break;
 
-  case (player1 == "carta" && player2 === "forbici") || (player1 == "forbici" && player2 == "sasso") || (player1 == "sasso" && player2 == "carta"):
+  default:
     risultato = "Il giocatore2 ha vinto!";
     break;
 }
